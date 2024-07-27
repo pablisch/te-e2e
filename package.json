@@ -1,0 +1,17 @@
+{
+  "name": "test-evolve-project",
+  "version": "1.0.0",
+  "description": "An example Test Evolve project",
+  "dependencies": {
+    "@testevolve/testevolve-spark": "npm:@testevolve/testevolve-js-spark"
+  },
+  "scripts": {
+    "test:examples": "CONFIG_DIR=ci_config/examples ./node_modules/.bin/cucumber-js --parallel 2 --tags '@examples'",
+    "test:select": "CONFIG_DIR=ci_config/select ./node_modules/.bin/cucumber-js --parallel 2 --tags '@run-me'",
+    "test:examples:windows": "SET CONFIG_DIR=ci_config/examples && .\\node_modules\\.bin\\cucumber-js --parallel 2 --tags \"@examples\"",
+    "test": "./node_modules/.bin/cucumber-js",
+    "test:windows": ".\\node_modules\\.bin\\cucumber-js",
+    "rerun": "./node_modules/.bin/cucumber-js ./remote_test_results/rerun/@rerun.log",
+    "rerun:windows": ".\\node_modules\\.bin\\cucumber-js ./remote_test_results/rerun/@rerun.log"
+  }
+}
